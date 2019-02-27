@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root to: 'pages#home'
   resources :todo_lists do
     resources :todo_items do
       member do
